@@ -5,7 +5,8 @@
         <classes>
             <class name="tests.lauchMainPage.LaunchSmokeTest">
                 <methods>
-                    <include name="acceptCookiesWasPressed"/>
+                    <include name="digitTabWasPressed"/>
+                    <include name="testLangChanging"/>
                 </methods>
             </class>
         </classes>
