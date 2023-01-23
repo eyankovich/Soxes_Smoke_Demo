@@ -1,0 +1,46 @@
+package pages.main;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import pages.base.BasePage;
+
+public class SoxesHomePage extends BasePage {
+    public SoxesHomePage(WebDriver driver) {
+        super(driver);
+    }
+
+    private final By langButton = By.xpath("//*[@class=\"wpml-ls-display\"]");
+    private final By acceptButton = By.xpath("//a[@class=\"cn-set-cookie cn-button\"]");
+    private final By itemButton = By.xpath("//div[@class=\"nectar-category-grid-item\"][1]");
+
+    public SoxesHomePage acceptCookie() {
+        try {
+            WebElement accept = driver.findElement(acceptButton);
+            waitElementIsVisible(accept).click();
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        return this;
+    }
+
+
+    public SoxesHomePage changeLanguage () {
+        try {
+            WebElement lang = driver.findElement(langButton);
+            waitElementIsVisible(lang).click();
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        return this;
+    }
+
+    public SoxesHomePage clickToItem() {
+        WebElement button = driver.findElement(itemButton);
+        waitElementIsVisible(button).click();
+        return this;
+    }
+
+}
