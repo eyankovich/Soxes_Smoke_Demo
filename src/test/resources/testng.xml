@@ -3,12 +3,12 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="/Users/egor.yankovich/IdeaProjects/Soxes_Smoke_Demo">
         <classes>
-            <class name="tests.lauchMainPage.LaunchSmokeTest">
-                <methods>
-                    <include name="digitTabWasPressed"/>
-                    <include name="testLangChanging"/>
-                </methods>
-            </class>
+            <class name="tests.lauchMainPage.LaunchSmokeTest"></class>
+<!--                <methods>-->
+<!--                    <include name="digitTabWasPressed"/>-->
+<!--                    <include name="testCountSolutionButtons"/>-->
+<!--                    <include name="testLangChanging"/>-->
+<!--                </methods>-->
         </classes>
     </test>
 </suite>

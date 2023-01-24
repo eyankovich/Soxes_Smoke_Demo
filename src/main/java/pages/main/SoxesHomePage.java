@@ -11,11 +11,11 @@ public class SoxesHomePage extends BasePage {
     public SoxesHomePage(WebDriver driver) {
         super(driver);
     }
-
     private final By langButton = By.xpath("//*[@class=\"wpml-ls-display\"]");
     private final By acceptButton = By.xpath("//a[@class=\"cn-set-cookie cn-button\"]");
-    private final By itemButton = By.xpath("//a[@aria-label=\"Digitalisierung\"]");
+    private final By itemButton = By.xpath("//div[@class=\"nectar-category-grid-item\"][1]");
     private final By langLabel = By.xpath("//span[@class='wpml-ls-native']");
+    private final By solutionsButtons = By.className("nectar-category-grid-item");
 
     public SoxesHomePage acceptCookie() {
         try {
@@ -48,5 +48,11 @@ public class SoxesHomePage extends BasePage {
         waitElementIsVisible(button).click();
         return this;
     }
+
+    public SoxesHomePage checkCountSolutionsButtons() {
+        int countButtons = driver.findElements(solutionsButtons).size();
+        Assert.assertEquals(countButtons, 13);
+        return this;
+    };
 
 }
