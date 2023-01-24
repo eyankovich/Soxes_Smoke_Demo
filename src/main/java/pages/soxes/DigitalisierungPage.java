@@ -14,7 +14,7 @@ public class DigitalisierungPage extends BasePage {
     public DigitalisierungPage checkCorrectTitle () {
         WebElement titleForPage = driver.findElement(title);
         String element = waitElementIsVisible(titleForPage).getText();
-        Assert.assertEquals(element, "Digitalisierung1");
+        Assert.assertEquals(element, "Digitalisierung");
         return this;
     }
 }
