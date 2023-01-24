@@ -14,7 +14,7 @@ public class SoxesHomePage extends BasePage {
 
     private final By langButton = By.xpath("//*[@class=\"wpml-ls-display\"]");
     private final By acceptButton = By.xpath("//a[@class=\"cn-set-cookie cn-button\"]");
-    private final By itemButton = By.xpath("//div[@class=\"nectar-category-grid-item\"][1]");
+    private final By itemButton = By.xpath("//a[@aria-label=\"Digitalisierung\"]");
     private final By langLabel = By.xpath("//span[@class='wpml-ls-native']");
 
     public SoxesHomePage acceptCookie() {
