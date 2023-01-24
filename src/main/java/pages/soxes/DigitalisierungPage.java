@@ -10,11 +10,11 @@ public class DigitalisierungPage extends BasePage {
     public DigitalisierungPage(WebDriver driver) {
         super(driver);
     }
-    private final By title = By.xpath("//h1[text()='Digitalisierun1']");
+    private final By title = By.xpath("//h1[text()='Digitalisierun']");
     public DigitalisierungPage checkCorrectTitle () {
         WebElement titleForPage = driver.findElement(title);
         String element = waitElementIsVisible(titleForPage).getText();
-        Assert.assertEquals(element, "Digitalisierung");
+        Assert.assertEquals(element, "Digitalisierung1");
         return this;
     }
 }

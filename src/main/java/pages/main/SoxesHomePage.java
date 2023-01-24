@@ -43,7 +43,6 @@ public class SoxesHomePage extends BasePage {
         return this;
     }
 
-    @Step ("Click to EN button")
     public SoxesHomePage clickToItem() {
         WebElement button = driver.findElement(itemButton);
         waitElementIsVisible(button).click();
