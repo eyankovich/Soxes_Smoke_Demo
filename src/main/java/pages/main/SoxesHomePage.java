@@ -35,7 +35,7 @@ public class SoxesHomePage extends BasePage {
 
             WebElement langLb = driver.findElement(langLabel);
             String lb = waitElementIsVisible(langLb).getText();
-            Assert.assertEquals(lb, "EN1");
+            Assert.assertEquals(lb, "EN");
 
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
