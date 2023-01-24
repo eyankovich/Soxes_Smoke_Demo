@@ -1,5 +1,6 @@
 package pages.main;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,6 +43,7 @@ public class SoxesHomePage extends BasePage {
         return this;
     }
 
+    @Step ("Click to EN button")
     public SoxesHomePage clickToItem() {
         WebElement button = driver.findElement(itemButton);
         waitElementIsVisible(button).click();
